@@ -49,8 +49,8 @@ inputs:
     description: 'KernelSU default branch'
     required: false
     default: "main"
-  ksu-other:
-    description: 'Using third party kernelsu'
+  ksu-next:
+    description: 'Using kernelsu next'
     required: false
     default: false
   ksu-url:
