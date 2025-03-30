@@ -306,8 +306,8 @@ runs:
             if [ -f KernelSU/kernel/Kconfig ]; then
                 echo "KernelSU has been initialized,skipped."
             else
-                if [ ${{ inputs.ksu-other }} = true ]; then
-                    curl -SsL "${{ inputs.ksu-url }}/raw/${{ inputs.ksu-version }}/kernel/setup.sh" | bash -s ${{ inputs.ksu-version }}
+                if [ ${{ inputs.ksu-next }} = true ]; then
+                    curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
                 else
                     echo "Kernel version: $VERSION.$PATCHLEVEL.$SUBLEVEL"
                     if [ -f nongki.txt ]; then
